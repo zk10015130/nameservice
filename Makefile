@@ -3,8 +3,8 @@ include Makefile.ledger
 all: install
 
 install: go.sum
-	GO111MODULE=1 go install -tags "$(build_tags)" ./cmd/nsd
-	GO111MODULE=1 go install -tags "$(build_tags)" ./cmd/nscli
+	GO111MODULE=on go install -tags "$(build_tags)" ./cmd/nsd
+	GO111MODULE=on go install -tags "$(build_tags)" ./cmd/nscli
 
 go.sum: go.mod
 	@echo "--> Ensure dependencies have not been modified"
